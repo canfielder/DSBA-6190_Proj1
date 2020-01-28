@@ -1,4 +1,17 @@
+  
 steps:
+- name: python:3.7
+  id: INSTALL
+  entrypoint: python3
+  args:
+  - '-m'
+  - 'pip'
+  - 'install'
+  - '-t'
+  - '.'
+  - '-r'
+  - 'requirements.txt'
+  - INSTALL
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
