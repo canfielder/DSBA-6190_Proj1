@@ -3,6 +3,9 @@
 
 from flask import Flask
 from flask import jsonify
+from time import gmtime, strftime
+from google.cloud import translate
+
 
 app = Flask(__name__)
 
@@ -27,6 +30,30 @@ def html():
     <p>Hello</p>
     <p><b>World</b></p>
     """
+
+
+@app.route('/time')
+def time():
+    my_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    print("This was the time I returned")
+    my_time_dict = {"time": my_time}
+    return jsonify(my_time_dict)
+
+
+@app.route('/translate')
+def translate_language():
+    text_input = 'koszula'
+    client = translate.Client()
+    translate_dict = client.translate(text_input)
+    return jsonify(translate_dict)
+
+
+@app.route('/detect')
+def detect_language():
+    text_input = 'Me llamo'
+    client = translate.Client()
+    detect_dict = client.detect_language(text_input)
+    return jsonify(detect_dict)
 
 
 if __name__ == '__main__':

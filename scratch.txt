@@ -1,0 +1,11 @@
+# Import
+from google.cloud import translate
+
+client = translate.Client()
+client.get_languages()
+
+# Detect
+ client.detect_language(['Me llamo', 'I am'])
+
+ # translate
+ client.translate('koszula')
