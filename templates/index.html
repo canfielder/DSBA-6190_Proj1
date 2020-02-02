@@ -1,33 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required metadata tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Translate and analyze text with Google Cloud Translate API.">
+    <link rel="stylesheet" media="screen" href="{{  url_for('static', filename="bootstrap.min.css")  }}"
 
+    <head>
+        <!-- Required metadata tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Translate and analyze text with Google Cloud Translate API.">
 
-    <title>Translate and Detect Languages with Google Cloud Translate API</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Translate and Detect Languages with Google Cloud Translate API</h1>
-      <p>Enter text and select either Translate or Detect</a>.
-     </p>
-    </div>
-     
-    <div class="container">
-        <form method="POST">
-            <textarea name="text" rows="15" style="width:33%" wrap="soft"> </textarea>
-            <p>
-                <input type="submit" name="submit_button" value="Translate">
-                <input type="submit" name="submit_button" value="Detect">
-            </p>
-        </form>
-    </div>
-    
-        {% if result %}
-        <pre>{{ result }}</pre>
-        {% endif %}
+        <title>Translate and Detect Languages with Google Cloud Translate API</title>
+    </head>
+
+    <body class - "body">
+    <body>
+        <div class="container">
+        <h1>Translate and Detect Languages</h1>
+        <p>
+            The following app utilizes the Google Cloud Translate API to both 
+            translate statements into English <br>and to detect the language of a 
+            submitted statement. 
+            <br>
+            <br>
+            Enter text into the box below and select either Translate or Detect</a>.
+        </p>
+        </div>
+        
+        <div class="container">
+            <form method="POST">
+                <textarea name="text" rows="10" style="width:33%" wrap="soft"> </textarea>
+                <p>
+                    <input type="submit" name="submit_button" value="Translate">
+                    <input type="submit" name="submit_button" value="Detect">
+                </p>
+            </form>
+        </div>
+        
+         <div class="container">
+            {% if result %}
+            <pre>{{ result }}</pre>
+            {% endif %}
+        </div>
+        </body>
     </body>
+
 </html>
