@@ -16,8 +16,7 @@ https://dsba-6190-proj1.appspot.com
 
 ## Translate
 The translate function takes provided text and translates the text into English. It automatically detects the source langue 
-of the proivided text. The translate funciton translates each word seperately. It does not handle context within phrases, 
-so it is best used to translate individual words.
+of the proivided text.
 
 Future versions of this app would allow the user to select the output text language, as opposed ot defaulting to english.
 
