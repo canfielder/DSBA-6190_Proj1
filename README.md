@@ -2,12 +2,16 @@
 The goal of this project is to create a Flask App on the Google Cloud Platform enabled with continuous delivery. For the flask app, 
 I decided to also integrate a Google Cloud API in order to become more familiar with using the avaialble APIs and ensuring the APIs 
 successfull operate. The API I used was Google Cloud Translate, and with this API I developed an app with two functions: Detect and 
-Translate.
+Translate. Furthermore, this project was connected with CircleCI to also ensure contiuous integration and testing. 
+
+[![CircleCI](https://circleci.com/gh/canfielder/DSBA-6190_Proj1.svg?style=svg)](https://circleci.com/gh/canfielder/DSBA-6190_Proj1)
+
+The screenshots used in this README show how to use the app. The example input text comes from a BBC news article in Swahili (https://www.bbc.com/swahili/habari-51348315) 
 
 ## Insert default screenshot.
 
-Furthermore, this project was connected with CircleCI to also ensure contiuous integration and testing. 
-[![CircleCI](https://circleci.com/gh/canfielder/DSBA-6190_Proj1.svg?style=svg)](https://circleci.com/gh/canfielder/DSBA-6190_Proj1)
+
+
 
 
 
