@@ -27,7 +27,7 @@
         
         <div class="container">
             <form method="POST">
-                <textarea name="text" rows="10" style="width:33%" wrap="soft"> </textarea>
+                <textarea name="text" rows="10" style="width:40%" wrap="soft"> </textarea>
                 <p>
                     <input type="submit" name="submit_button" value="Translate">
                     <input type="submit" name="submit_button" value="Detect">
@@ -37,7 +37,7 @@
         
          <div class="container">
             {% if result %}
-            <pre>{{ result }}</pre>
+            <pre wrap="soft" style="width:40%">{{ result }}</pre>
             {% endif %}
         </div>
         </body>
