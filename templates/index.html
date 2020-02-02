@@ -12,14 +12,22 @@
   <body>
     <div class="container">
       <h1>Translate and Detect Languages with Google Cloud Translate API</h1>
-      <p>Enter text into the following text box and select Translate or Detect</a>.
+      <p>Enter text and select either Translate or Detect</a>.
      </p>
+    </div>
      
-<form method="POST">
-    <textarea name="text" rows="30" style="width:33%" wrap="soft"> </textarea>
-    <p>
-        <input type="submit" name="submit_button" value="Translate">
-        <input type="submit" name="submit_button" value="Detect">
-    </p>
-</form>
-
+    <div class="container">
+        <form method="POST">
+            <textarea name="text" rows="15" style="width:33%" wrap="soft"> </textarea>
+            <p>
+                <input type="submit" name="submit_button" value="Translate">
+                <input type="submit" name="submit_button" value="Detect">
+            </p>
+        </form>
+    </div>
+    
+        {% if result %}
+        <pre>{{ result }}</pre>
+        {% endif %}
+    </body>
+</html>

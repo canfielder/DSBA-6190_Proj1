@@ -1,8 +1,10 @@
 
 # import logging
 
-from flask import Flask,  request, render_template, jsonify
+from flask import Flask,  request, render_template
 from google.cloud import translate
+
+import json
 
 app = Flask(__name__)
 
@@ -14,36 +16,17 @@ def landing_page():
             text_input = request.form['text']
             client = translate.Client()
             translate_dict = client.translate(text_input)
-            return jsonify(translate_dict)
+            result_translate = json.dumps(translate_dict, sort_keys=False, indent=2)
+            return render_template('index.html', result=result_translate)
         elif request.form['submit_button'] == 'Detect':
             text_input = request.form['text']
             client = translate.Client()
             detect_dict = client.detect_language(text_input)
-            return jsonify(detect_dict)
+            result_detect = json.dumps(detect_dict, sort_keys=False, indent=2)
+            return render_template('index.html', result=result_detect)
         else:
             pass
     return render_template('index.html')
-
-
-@app.route('/translate', methods=['GET', 'POST'])
-def translate_language():
-    if request.method == 'POST':
-        text_input = request.form['text']
-        client = translate.Client()
-        translate_dict = client.translate(text_input)
-        # return redirect(url_for('index'))
-        return jsonify(translate_dict)
-    return render_template('translate.html')
-
-
-@app.route('/detect', methods=['GET', 'POST'])
-def detect_language():
-    if request.method == 'POST':
-        text_input = request.form['text']
-        client = translate.Client()
-        detect_dict = client.detect_language(text_input)
-        return jsonify(detect_dict)
-    return render_template('detect.html')
 
 
 if __name__ == '__main__':
