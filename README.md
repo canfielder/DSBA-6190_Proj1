@@ -6,9 +6,9 @@ Translate. Furthermore, this project was connected with CircleCI to also ensure 
 
 [![CircleCI](https://circleci.com/gh/canfielder/DSBA-6190_Proj1.svg?style=svg)](https://circleci.com/gh/canfielder/DSBA-6190_Proj1)
 
-The screenshots used in this README show how to use the app. The example input text comes from a BBC news article in Swahili (https://www.bbc.com/swahili/habari-51348315) 
+The screenshots used in this README show how to use the app. The example input text comes from a BBC news article in Swahili. (https://www.bbc.com/swahili/habari-51348315) 
 
-## Insert default screenshot.
+![Input](static/images/App_Input_Swahili.png)
 
 
 
