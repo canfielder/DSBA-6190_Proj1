@@ -1,10 +1,10 @@
+[![CircleCI](https://circleci.com/gh/canfielder/DSBA-6190_Proj1.svg?style=svg)](https://circleci.com/gh/canfielder/DSBA-6190_Proj1)
+
 # DSBA-6190 Project 1 - Continuous Delivery of Flask Application on GCP
 The goal of this project is to create a Flask App on the Google Cloud Platform enabled with continuous delivery. For the flask app, 
 I decided to also integrate a Google Cloud API in order to become more familiar with using the avaialble APIs and ensuring the APIs 
 successfull operate. The API I used was Google Cloud Translate, and with this API I developed an app with two functions: Detect and 
 Translate. Furthermore, this project was connected with CircleCI to also ensure contiuous integration and testing. 
-
-[![CircleCI](https://circleci.com/gh/canfielder/DSBA-6190_Proj1.svg?style=svg)](https://circleci.com/gh/canfielder/DSBA-6190_Proj1)
 
 The deployed app can be found at following url:
 
